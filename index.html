@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#080711">
+<title>For Mim — A Little Universe of Love</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="grain"></div>
+<div id="app">
+  <header class="topbar">
+    <a class="brand" href="#" aria-label="For Mim home"><span class="brand-dot"></span> FOR MIM</a>
+    <div class="top-actions"><button id="adminOpen" class="admin-open" hidden>✦ ADMIN STUDIO</button><button id="soundBtn" class="sound-btn" aria-label="Toggle music"><span class="sound-icon">♫</span><span id="soundLabel">SOUND OFF</span></button></div>
+  </header>
+
+  <main>
+    <section id="hero" class="scene hero active">
+      <div class="hero-glow"></div>
+      <div class="hero-copy">
+        <p class="eyebrow reveal">A LITTLE UNIVERSE, MADE FOR YOU</p>
+        <h1 class="hero-title reveal">For you,<br><em>Mim.</em></h1>
+        <p class="hero-sub reveal">Some feelings are too beautiful for ordinary words.</p>
+        <button id="beginBtn" class="primary-btn reveal">Enter our little world <span>↗</span></button>
+      </div>
+      <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+      <div class="scroll-note">SCROLL OR TAP TO EXPLORE <span>↓</span></div>
+    </section>
+
+    <section id="treeScene" class="scene tree-scene">
+      <canvas id="treeCanvas" aria-label="An animated magical tree with heart-shaped leaves"></canvas>
+      <div class="scene-vignette"></div>
+      <div class="tree-heading">
+        <p class="eyebrow">GROWN FROM A THOUGHT OF YOU</p>
+        <h2>A heart in<br><em>every leaf.</em></h2>
+        
+      </div>
+      <div class="birthday-typewriter" aria-label="Happy Birthday Mim"><span class="typewriter-kicker">A SPECIAL DAY FOR</span><strong id="birthdayTypeText">HAPPY BIRTHDAY MIM</strong><i aria-hidden="true"></i></div>
+      
+      <button class="love-play" id="lovePlay" aria-label="Play floating love messages"><span class="play-heart">♥</span><span>PLAY LOVE</span><i>✧</i></button>
+      <button class="birthday-btn" id="birthdayBtn">✦ A little birthday magic</button>
+      <button class="next-btn" data-next="galleryScene">Let the flowers bloom <span>→</span></button>
+    </section>
+
+    <section id="galleryScene" class="scene gallery-scene birthday-portal-scene">
+      <div class="portal-backdrop" aria-hidden="true"><div class="portal-planet planet-one"></div><div class="portal-planet planet-two"></div><div class="portal-ring ring-one"></div><div class="portal-ring ring-two"></div><div class="portal-starfield"></div></div>
+      <div class="section-head portal-heading">
+        <p class="eyebrow">A LITTLE BIRTHDAY CELEBRATION</p>
+        <h2>Welcome to<br><em>Mim’s universe.</em></h2>
+        <p class="portal-intro">Five little birthday surprises, made just for you. Choose one to begin.</p>
+      </div>
+      <div class="flower-grid portal-grid" id="flowerGrid">
+        <button class="flower-card portal-card" data-index="0"><span class="flower-art portal-art portal-sun"><i></i><b>☼</b><small>01</small></span><span class="flower-caption">Solar Wish</span><span class="portal-subtitle">A new orbit of joy</span></button>
+        <button class="flower-card portal-card" data-index="1"><span class="flower-art portal-art portal-cake"><i></i><b>♕</b><small>02</small></span><span class="flower-caption">Cake Nebula</span><span class="portal-subtitle">Make a wish</span></button>
+        <button class="flower-card portal-card" data-index="2"><span class="flower-art portal-art portal-gift"><i></i><b>◇</b><small>03</small></span><span class="flower-caption">Gift Dimension</span><span class="portal-subtitle">Something just for you</span></button>
+        <button class="flower-card portal-card" data-index="3"><span class="flower-art portal-art portal-fireworks"><i></i><b>✧</b><small>04</small></span><span class="flower-caption">Stardust Finale</span><span class="portal-subtitle">A sky full of wishes</span></button>
+        <button class="flower-card portal-card" data-index="4"><span class="flower-art portal-art portal-heart"><i></i><b>♥</b><small>05</small></span><span class="flower-caption">Heart Reactor</span><span class="portal-subtitle">Powered by love</span></button>
+      </div>
+      <p class="portal-footer">DESIGNED FOR ONE VERY SPECIAL PERSON <span>✦</span></p>
+      <button class="next-btn dark-next" data-next="poemScene">A few words from my heart <span>→</span></button>
+    </section>
+
+    <section id="poemScene" class="scene poem-scene">
+      <div class="poem-stars" aria-hidden="true"></div><div class="poem-birthday-orbit" aria-hidden="true"><span>✦</span><span>♡</span><span>✧</span><span>✷</span></div>
+      <div class="poem-card">
+        <p class="eyebrow">IF MY HEART COULD WRITE</p>
+        <div class="poem-mark">“</div>
+        <p id="poemText" class="poem-text">If every star could speak your name,<br>the night would never look the same.</p>
+        <p id="poemCount" class="poem-count">01 — 08</p>
+        <div class="poem-controls"><button id="prevPoem" aria-label="Previous poem">←</button><div class="poem-dots" id="poemDots"></div><button id="nextPoem" aria-label="Next poem">→</button></div>
+        <p class="swipe-note">SWIPE TO TURN THE PAGE</p>
+      </div>
+      <button class="next-btn" data-next="letterScene">One last little surprise <span>→</span></button>
+    </section>
+
+    <section id="letterScene" class="scene letter-scene">
+      <div class="letter-glow"></div><div class="letter-birthday-lights" aria-hidden="true"><span>🎈</span><span>✦</span><span>♡</span><span>🎁</span><span>✧</span></div>
+      <div class="letter-wrap">
+        <p class="eyebrow">OPEN WHEN YOU NEED A LITTLE MAGIC</p>
+        <div class="envelope" id="envelope" role="button" tabindex="0" aria-label="Open the love letter">
+          <div class="envelope-back"></div><div class="letter-paper"><span class="letter-date">A NOTE FOR MIM</span><h2>My dearest Mim,</h2><p>In a world that never stops moving, you are one of my favorite reasons to pause. If I could plant one thing in the universe, it would be a garden that reminds you every day how deeply you are appreciated.</p><p>May life give you soft mornings, brave dreams, unexpected flowers, and a thousand reasons to smile. And whenever the world feels heavy, remember: you deserve gentleness, joy, and love that feels like home.</p><p class="letter-sign">Always wishing you beautiful things,<br><em>Someone who thinks the world of you ♡</em></p></div>
+          <div class="envelope-flap"></div><div class="envelope-seal">M</div>
+        </div>
+        <button id="openLetterBtn" class="primary-btn">Open your letter <span>♡</span></button>
+        
+        <button id="restartBtn" class="text-btn">↺ Begin the journey again</button>
+      </div>
+    </section>
+  </main>
+  <nav class="scene-nav" aria-label="Scene navigation"><button class="nav-dot selected" data-goto="hero" aria-label="Home"></button><button class="nav-dot" data-goto="treeScene" aria-label="Love tree"></button><button class="nav-dot" data-goto="galleryScene" aria-label="Flowers"></button><button class="nav-dot" data-goto="poemScene" aria-label="Poems"></button><button class="nav-dot" data-goto="letterScene" aria-label="Letter"></button></nav>
+  <div id="photoModal" class="photo-modal" role="dialog" aria-modal="true" aria-label="Memory scene">
+    <button id="closeModal" class="modal-close" aria-label="Close">×</button>
+    <div id="memoryStage" class="memory-stage theme-rose" aria-hidden="true"><div class="memory-moon"></div><div class="memory-stars"><i>✦</i><i>✧</i><i>✦</i><i>⋆</i><i>✧</i></div><div class="memory-object">🌹</div><div class="memory-orbit"></div><div class="memory-ribbons"><i>♡</i><i>✦</i><i>♡</i><i>✧</i><i>♡</i></div><div class="memory-video-label">A LITTLE MOMENT, MADE OF MAGIC</div></div>
+    <p id="modalCaption" class="modal-caption">Solar Wish</p><p id="modalMessage" class="modal-message">May every new orbit bring you joy.</p><button id="memoryAction" class="memory-action" data-activity="0">Collect stardust ✦</button></div>
+  <div id="birthdayOverlay" class="birthday-overlay" aria-hidden="true">
+    <div class="birthday-card"><button id="closeBirthday" class="birthday-close" aria-label="Close">×</button><div class="birthday-orbit">✦　✧　♡　✧　✦</div><p class="eyebrow">A WISH WRAPPED IN STARDUST</p><div class="birthday-cake"><span>♡</span><i></i><i></i><i></i></div><h2>Happy Birthday,<br><em>Mim.</em></h2><p id="birthdayMessage">May your next chapter be softer, brighter, and filled with the kind of magic you give to everyone around you.</p><button id="birthdayWishBtn" class="primary-btn">Make a little wish <span>✧</span></button></div>
+  </div>
+  <div id="adminPanel" class="admin-panel" aria-hidden="true">
+    <div class="admin-header"><div><p class="eyebrow">PRIVATE WORKSPACE</p><h2>Admin <em>Studio</em></h2></div><button id="adminClose" class="admin-close" aria-label="Close admin">×</button></div>
+    
+    <label class="admin-label" for="adminPoem">Add a poem or love note</label><textarea id="adminPoem" rows="4" placeholder="Write a little poem for Mim…"></textarea><button id="savePoem" class="primary-btn admin-action">＋ Add poem</button>
+    <label class="admin-label" for="adminBirthday">Birthday message</label><textarea id="adminBirthday" rows="3" placeholder="Write Mim's birthday wish…"></textarea><button id="saveBirthday" class="primary-btn admin-action">Save birthday message</button>
+    <button id="resetLocalContent" class="admin-reset">Reset local edits</button>
+  </div>
+  <div id="loveParticles" class="love-particles" aria-hidden="true"></div>
+  <div id="toast" class="toast" role="status"></div>
+</div>
+<script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
